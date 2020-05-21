@@ -1,0 +1,10 @@
+{
+    "name": "weberlei/wp-weberlei-notitle",
+    "description": "Wordpress plugin that adds a dropdown admin option in every page to hide the title from rendering on a page.",
+    "homepage": "https://github.com/WEBerlei/wp-weberlei-notitle",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
