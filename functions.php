@@ -50,7 +50,11 @@ function weberlei_notitle_save_postdata($post_id) {
 add_action('save_post', 'weberlei_notitle_save_postdata');
 
 function weberlei_the_title_hide($title, $id = null) {
-    $hideTitle = (bool) get_post_meta($id, '_weberlei_notitle');
+    if (is_admin()) {
+        return $title;
+    }
+
+    $hideTitle = (bool) get_post_meta($id, '_weberlei_notitle', true);
 
     if ($hideTitle) {
         return '';
