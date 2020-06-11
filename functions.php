@@ -50,7 +50,7 @@ function weberlei_notitle_save_postdata($post_id) {
 add_action('save_post', 'weberlei_notitle_save_postdata');
 
 function weberlei_the_title_hide($title, $id = null) {
-    if (is_admin() && !in_the_loop()) {
+    if (is_admin() || !in_the_loop()) {
         return $title;
     }
 
